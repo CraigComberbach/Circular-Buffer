@@ -56,15 +56,14 @@ dkms.conf
 
 # MPLAB X IDE
 ~*.*
-build/
-debug/
-dist/
-disassembly/
-.generated_files/
-nbproject/private/
-nbproject/*.mk
-nbproject/*.bash
-nbproject/Makefile-genesis.properties
+*.X/build/
+*.X/debug/
+*.X/dist/
+*.X/.generated_files/
+*.X/nbproject/private/
+*.X/nbproject/*.mk
+*.X/nbproject/*.bash
+*.X/nbproject/Makefile-genesis.properties
 
 # KDE specific
 .directory
@@ -72,3 +71,4 @@ nbproject/Makefile-genesis.properties
 # Misc
 .svn
 *.bak
+
