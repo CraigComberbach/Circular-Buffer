@@ -51,8 +51,10 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# Excel Temporary file
-~$*.xlsx
+# Microsoft Office Temporary files
+~$*.xls*
+~$*.doc*
+~$*.ppt*
 
 # MPLAB X IDE
 ~*.*
