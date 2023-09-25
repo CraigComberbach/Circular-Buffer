@@ -56,16 +56,13 @@ dkms.conf
 ~$*.doc*
 ~$*.ppt*
 
-# MPLAB X IDE
-~*.*
+# MPLAB X IDE Specific
 *.X/build/
 *.X/debug/
 *.X/dist/
 *.X/.generated_files/
 *.X/nbproject/private/
-*.X/nbproject/*.mk
-*.X/nbproject/*.bash
-*.X/nbproject/Makefile-genesis.properties
+*.X/nbproject/Makefile-*
 
 # KDE specific
 .directory
