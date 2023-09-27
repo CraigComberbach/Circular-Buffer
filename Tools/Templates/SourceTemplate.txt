@@ -1,0 +1,30 @@
+/******************************************************************************
+Version History:
+v0.0.0	YYYY-MM-DD	Craig Comberbach	Compiler: [Compiler] [Version]
+* First version
+ *****************************************************************************/
+/************Header Files*************/
+#include <stdint.h>
+#include "Config.h"
+#include "%1$s.h"
+
+/********Semantic Versioning**********/
+#if %1$s_MAJOR != 0
+	#error "%1$s library major revision update is available"
+#elif %1$s_MINOR != 0
+	#error "%1$s library minor revision update is available"
+#elif %1$s_PATCH != 0
+	#error "%1$s library patch revision update is available"
+#endif
+
+/***********Magic Numbers*************/
+/************Enumeration**************/
+/*********Object Definition***********/
+struct
+{
+
+} self[NUMBER_OF_%1$s];
+
+/**********Global Variables***********/
+/*****Local Function Prototypes*******/
+/*********Main Body Of Code***********/
