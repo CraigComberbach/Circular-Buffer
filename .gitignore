@@ -71,3 +71,9 @@ dkms.conf
 .svn
 *.bak
 
+# Ceedling
+build/artifacts
+build/gcov
+build/logs 
+build/temp
+build/test
