@@ -104,13 +104,9 @@ uint8_t CB_Write(CircularBuffer_t *self, uint8_t *newData)
 {
 	uint8_t ReturnCode = 0;
 
-	if(self != NULL)
+	if((self != NULL) && (self->Buffer != NULL))
 	{
-		if(Buffer_Is_Full(self))
-		{
-			ReturnCode = 0; //Failure, buffer is full
-		}
-		else
+		if(!Buffer_Is_Full(self))
 		{
 			self->Buffer[self->TailIndex] = *newData;
 			self->TailIndex = Advance_Index(self->TailIndex, self->SizeOfBuffer);
@@ -125,13 +121,9 @@ uint8_t CB_Read(CircularBuffer_t *self, uint8_t **data)
 {
 	uint8_t ReturnCode = 0;
 
-	if(self != NULL)
+	if((self != NULL) && (self->Buffer != NULL))
 	{
-		if(Buffer_Is_Empty(self))
-		{
-			//Failure, buffer is empty
-		}
-		else
+		if(!Buffer_Is_Empty(self))
 		{
 			*data = &(self->Buffer[self->HeadIndex]);
 			self->HeadIndex = Advance_Index(self->HeadIndex, self->SizeOfBuffer);
@@ -184,7 +176,6 @@ uint8_t Buffer_Is_Empty(CircularBuffer_t *self)
         return 0; //Not empty
     }
 }
-
 
 #endif//FEATURE_CIRCULAR_BUFFER
 
