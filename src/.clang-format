@@ -14,15 +14,7 @@ AlignConsecutiveBitFields:
   Enabled: true
   AcrossEmptyLines: false
   AcrossComments: false
-BreakBeforeBraces: Custom
-BraceWrapping:
-  AfterFunction: true
-  AfterEnum: true
-  AfterStruct: true
-  AfterControlStatement: Always
-  AfterUnion: true
-  BeforeElse: true
-  BeforeWhile: false
+BreakBeforeBraces: Allman
 InsertBraces: true
 SpaceBeforeParens: Never
 SpacesBeforeTrailingComments: 0
@@ -32,3 +24,5 @@ SpacesInLineCommentPrefix:
 AllowShortFunctionsOnASingleLine: None
 PointerAlignment: Right
 IndentPPDirectives: BeforeHash
+IncludeBlocks: Merge
+InsertNewlineAtEOF: true
